@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
+  
   /**
   * Index Homepage
   */
@@ -21,14 +22,11 @@ class HomepageController extends Controller
     $DataCategory = DB::table('tbl_product_categories')->get();
     //Render content
     $ContentIndex = array(
-      'title' => 'Jual Beli Aman Cepat dan Terpercaya | Mukastore',
-      'desc'  => 'Halaman anak dari sistem informasi Keluarga'
+      'title' => 'Jual Beli Aman Cepat dan Terpercaya | Mukastore'
     );
     return view('child_parent', $ContentIndex, compact('DataProduct', 'DataCategory'));
   }
-  public function jumlah($a,$b){
-    return $a+$b;
-  }
+
   /**
   * Index Homepage
   */
@@ -41,8 +39,7 @@ class HomepageController extends Controller
     $DataCategory = DB::table('tbl_product_categories')->get();
     //Render content
     $ContentIndex = array(
-      'title' => 'Jual Beli Aman Cepat dan Terpercaya | Mukatoko',
-      'desc'  => 'Halaman anak dari sistem informasi Keluarga'
+      'title' => 'Jual Beli Aman Cepat dan Terpercaya | Mukatoko'
     );
     return view('product_list', $ContentIndex, compact('DataProduct', 'DataCategory'));
   }
